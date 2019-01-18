@@ -2,7 +2,7 @@ const dbP = require('./data/helpers/projectModel');
 // const dbA = require('./data/helpers/actionModel');
 
 
-router.get('/api/projects/:id', (req, res) => {
+router.get('/projects/:id', (req, res) => {
     const { id } = req.params;
   
     dbP.get(id)
@@ -14,13 +14,24 @@ router.get('/api/projects/:id', (req, res) => {
   });
 
 
-  router.post('/api/projects', (req, res) => {
+  router.post('/projects', (req, res) => {
     const nextProject = req.body;
   
       dbP.post(nextProject)
       .then( thisProject => {
         res.status(201).json(thisProject);
       }).catch( err => {
-        res.status(500).json({error: 'unable to create a new project'})
+        res.status(500).json({error: 'Error! No new project created.'});
+      });
+  });
+
+  server.get('/actions/:id', (req, res) => {
+    const { id } = req.params;
+  
+    dbP.getTheProjectActions(id)
+      .then( actions => {
+        res.status(200).json(actions);
+      }).catch( err => {
+        res.json({error: 'Error!  Can not find any action on this project.'});
       });
   });

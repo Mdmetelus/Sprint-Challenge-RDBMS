@@ -23,4 +23,4 @@ function projectToBody(project) {
       }));
     }
     return result;
-  }
+}
