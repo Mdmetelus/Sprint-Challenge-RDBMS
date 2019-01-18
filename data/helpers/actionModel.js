@@ -1,8 +1,8 @@
 const db = require('../dbconfig');
-const mapper = require('./mapper.js')
+const mappers = require('./mapper.js')
 
 module.exports = {
   
 
-    
+
 }

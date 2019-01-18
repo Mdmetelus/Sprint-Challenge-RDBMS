@@ -1,12 +1,17 @@
 const express = require('express');
 const helmet = require('helmet');
 const server = express();
+const allRoutes = require("./allRoutes/index");
+const dbP = require("./data/helpers/projectModel");
+const dbA = require("./data/helpers/actionModel");
+
 
 
 
 
 server.use(express.json());
 server.use(helmet());
+server.use('/api', allRoutes);
 
 
 
