@@ -2,7 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const server = express();
 
-// const db = require("./data/helpers/dataAccessFunct");
+
 
 
 server.use(express.json());
