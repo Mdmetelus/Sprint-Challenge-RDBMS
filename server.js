@@ -1,25 +1,26 @@
 const express = require('express');
-const helmet = require('helmet');
 const server = express();
-const allRoutes = require("./allRoutes/index");
-const dbP = require("./data/helpers/projectModel");
-const dbA = require("./data/helpers/actionModel");
+const helmet = require('helmet');
+const morgan = require('morgan');
+const cors = require('cors');
+const allRoutesP = require("./allRoutes/indexP");
+const allRoutesA = require("./allRoutes/indexA");
 
 
 
 
 
-server.use(express.json());
+server.use(express.json()); // json body parser
 server.use(helmet());
-server.use('/api', allRoutes);
+server.use(morgan("short"));
+server.use(cors());
+server.use('/api/projects', allRoutesP);
+server.use('/api/actions', allRoutesA);
 
 
-
-//routes
-server.get('/', (req, res) => {
-    res.send(`API working.\n Sanity Check\n Test Route!`);
-});
-  
   
   
   module.exports = server;
+
+
+  

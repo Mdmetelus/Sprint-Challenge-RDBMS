@@ -60,7 +60,7 @@ Follow these steps for completing your project.
 
 - [ x ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ x ] Add your project manager as a reviewer on the pull-request
-- [ ] Your project manager will count the project as complete by merging the branch back into master.
+- [ x ] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Minimum Viable Product
 
@@ -82,11 +82,11 @@ Feel free to name the tables and fields anything you want. **Add relationships**
 ### Tasks
 
 - [ x ] Build the database and tables using knex migrations. **Seeding is not needed**.
-- [ ] Build the API with the following endpoints:
+- [ x ] Build the API with the following endpoints:
 
-  - [ ] POST for adding projects.
-  - [ ] POST for adding actions.
-  - [ ] GET for retrieving a `project` by its `id` that returns an object with the following structure:
+  - [ x ] POST for adding projects.
+  - [ x ] POST for adding actions.
+  - [ x ] GET for retrieving a `project` by its `id` that returns an object with the following structure:
 
     ```js
     {

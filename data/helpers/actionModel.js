@@ -1,11 +1,11 @@
-const db = require('../dbconfig');
-const mapper = require('./mappers.js')
+// const db = require('../dbConfig');
+// // const mapper = require('./mappers');
 
-module.exports = {
-    postAction,
-}
+// module.exports = {
+//     postAction,
+// }
 
 
-function postAction(newAction) {
-    return db('actions').insert(newAction)
-}
+// function postAction(newAction) {
+//     return db('actions').insert(newAction)
+// }
